@@ -4,7 +4,7 @@ from setuptools import setup
 using_setuptools = True
 
 setup_args = {
-    'name': 'finder',
+    'name': 'findkw',
     'version': '0.1.0',
     'url': 'https://github.com/ga1008/finder',
     'description': 'find the files or words',
@@ -20,7 +20,7 @@ setup_args = {
     'zip_safe': False,
     'entry_points': {
         'console_scripts': [
-            'finder = finder.finder:find',
+            'findkw = findkw.findkw:find',
         ]
     },
 

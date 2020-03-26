@@ -1,29 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="138365bf-4be9-4dac-9cbe-b8db5c9611f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/Dict.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/sqlite_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/sqlite_orm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/sqlite_time_scheduling.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/sxclzy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/sxclzy-0.2.3-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/sxclzy-0.2.3.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2019-08-14 17-59-16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2019-08-17 15-39-33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/requires.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy/Dict.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy/README.MD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy/sqlite_model.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy/sqlite_orm.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sxclzy/sxclzy.py" beforeDir="false" />
-    </list>
+    <list default="true" id="138365bf-4be9-4dac-9cbe-b8db5c9611f5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,8 +59,29 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.finder">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="Findkw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="finder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Finder" />
+      <module name="Findkw" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -142,6 +141,49 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="Findkw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="Findkw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="Findkw" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -232,72 +274,72 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>56</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>64</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>44</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>39</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>40</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>27</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>24</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>30</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>78</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>79</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>80</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>81</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>84</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
           <line>85</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>

@@ -4,7 +4,7 @@
 
 怎么安装？
 =========
-pip install finder
+pip install findkw
 
 怎么使用
 =========
@@ -12,7 +12,7 @@ pip install finder
 ### 1. 在终端直接使用：
 
 ```
-$ finder -k "要查找关键字" [-f --folder] [-o --filename_only] [-r --re_mode]
+$ findkw -k "要查找关键字" [-f --folder] [-o --filename_only] [-r --re_mode]
 ```
 
 #### 参数解释：
@@ -33,44 +33,44 @@ $ finder -k "要查找关键字" [-f --folder] [-o --filename_only] [-r --re_mod
 ```shell script
 
 # 当前文件夹下查找所有符合关键字的文件内容
-$ finder -k "good job"
-# in file [ /root/Finder/README.md ]: 
-# >>> [ 36 ] [ $ finder -k "good job" ]
+$ findkw -k "good job"
+# in file [ /root/Findkw/README.md ]: 
+# >>> [ 36 ] [ $ findkw -k "good job" ]
 
 # 上面输出的是当前 README 文件的第36行，找到了需要的关键字
 
 # 在指定文件夹下查找关键字：
-$ finder -k "nice job" -f "/root/search_folder"
+$ findkw -k "nice job" -f "/root/search_folder"
 
 # 在当前文件夹下查找带有关键字的文件夹名或者文件名：
-$ finder -k "finder" -o y
-# >>> [ folder ] [ /root/Finder/finder.egg-info ]
-# >>> [ folder ] [ /root/Finder/build/lib/finder ]
-# >>> [ file name ] [ /root/Finder/finder/finder.py ]
-# >>> [ folder ] [ /root/Finder/finder ]
+$ findkw -k "findkw" -o y
+# >>> [ folder ] [ /root/Findkw/findkw.egg-info ]
+# >>> [ folder ] [ /root/Findkw/build/lib/findkw ]
+# >>> [ file name ] [ /root/Findkw/findkw/findkw.py ]
+# >>> [ folder ] [ /root/Findkw/findkw ]
 # ...
 
 # 正则模式查找所有以 .py 结尾的行：
-$ finder -k ".*?\.py$" -r y
-# in file [ /root/Finder/finder.egg-info/SOURCES.txt ]: 
+$ findkw -k ".*?\.py$" -r y
+# in file [ /root/Findkw/findkw.egg-info/SOURCES.txt ]: 
 # >>> [ 2 ] [ setup.py ]
-# >>> [ 3 ] [ finder/__init__.py ]
-# >>> [ 4 ] [ finder/finder.py ]
+# >>> [ 3 ] [ findkw/__init__.py ]
+# >>> [ 4 ] [ findkw/findkw.py ]
 
 # 正则模式查找所有以 .py 结尾的文件夹和文件名：
-$ finder -k ".*?\.py$" -r y -o y
-# >>> [ file name ] [ /root/Finder/setup.py ]
-# >>> [ file name ] [ /root/Finder/build/lib/finder/finder.py ]
-# >>> [ file name ] [ /root/Finder/build/lib/finder/__init__.py ]
-# >>> [ file name ] [ /root/Finder/finder/finder.py ]
-# >>> [ file name ] [ /root/Finder/finder/__init__.py ]
+$ findkw -k ".*?\.py$" -r y -o y
+# >>> [ file name ] [ /root/Findkw/setup.py ]
+# >>> [ file name ] [ /root/Findkw/build/lib/findkw/findkw.py ]
+# >>> [ file name ] [ /root/Findkw/build/lib/findkw/__init__.py ]
+# >>> [ file name ] [ /root/Findkw/findkw/findkw.py ]
+# >>> [ file name ] [ /root/Findkw/findkw/__init__.py ]
 
 # 正则模式查找所有带有 0.1 版本字样的行：
-$ finder -k "[Vv]ersion[\': ]+0\.1\.\d" -r y
-# in file [ /root/Finder/setup.py ]: 
+$ findkw -k "[Vv]ersion[\': ]+0\.1\.\d" -r y
+# in file [ /root/Findkw/setup.py ]: 
 # >>> [ 8 ] [ 'version': '0.1.0', ]
 
-# in file [ /root/Finder/finder.egg-info/PKG-INFO ]: 
+# in file [ /root/Findkw/findkw.egg-info/PKG-INFO ]: 
 # >>> [ 3 ] [ Version: 0.1.0 ]
 
 ```
@@ -78,10 +78,10 @@ $ finder -k "[Vv]ersion[\': ]+0\.1\.\d" -r y
 
 ### 2. 在代码中调用：
 
-#### 下载 Finder/finder/finder.py 文件到你的代码目录中
+#### 下载 Finder/findkw/findkw.py 文件到你的代码目录中
 
 ```
-from finder import Finder
+from findkw import Finder
 
 folder = "/root/search_folder"
 kw = "正则表达式或者关键字"

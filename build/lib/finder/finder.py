@@ -108,7 +108,7 @@ def find():
 
     kw = args.keyword
     if not kw:
-        raise ValueError('关键字是必须的: finder -k xxx')
+        raise ValueError('关键字是必须的: findkw -k xxx')
 
     folder = args.folder
     if not folder:
