@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="138365bf-4be9-4dac-9cbe-b8db5c9611f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/Dict.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/sqlite_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/sqlite_orm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/sqlite_time_scheduling.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/sxclzy/sxclzy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/sxclzy-0.2.3-py3-none-any.whl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/sxclzy-0.2.3.tar.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2019-08-14 17-59-16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2019-08-17 15-39-33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/PKG-INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/SOURCES.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/dependency_links.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/requires.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy.egg-info/top_level.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy/Dict.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy/README.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy/sqlite_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy/sqlite_orm.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sxclzy/sxclzy.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/.gitignore" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1PMXRR56FzNGVDPNz012lDIPz8n" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sxclzy" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/../sxclyz" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sxclzy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.finder">
+    <configuration name="finder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Finder" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/finder" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finder/finder.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sxclzy (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SXCLZY" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sxclzy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sxclzy/sxclzy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sxclzy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="SXCLZY" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../sxclzy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../sxclzy/sxclzy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.finder" />
+        <item itemvalue="Python.sxclzy (1)" />
+        <item itemvalue="Python.sxclzy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="138365bf-4be9-4dac-9cbe-b8db5c9611f5" name="Default Changelist" comment="" />
+      <created>1565684930807</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565684930807</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="468" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585021006702">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="468" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1585021006702" />
+    <state width="1848" height="542" key="DebuggerActiveHint" timestamp="1585195366967">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1848" height="542" key="DebuggerActiveHint/70.27.1850.1053@70.27.1850.1053" timestamp="1585195366967" />
+    <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585018683055">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1585018683055" />
+    <state width="1823" height="272" key="GridCell.Tab.0.bottom" timestamp="1585195497949">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1823" height="272" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1585195497949" />
+    <state width="1823" height="272" key="GridCell.Tab.0.center" timestamp="1585195497947">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1823" height="272" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1585195497947" />
+    <state width="1823" height="272" key="GridCell.Tab.0.left" timestamp="1585195497946">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1823" height="272" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1585195497946" />
+    <state width="1823" height="272" key="GridCell.Tab.0.right" timestamp="1585195497948">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1823" height="272" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585195497948" />
+    <state width="1823" height="336" key="GridCell.Tab.1.bottom" timestamp="1585195370298">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1823" height="336" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1585195370298" />
+    <state width="1823" height="336" key="GridCell.Tab.1.center" timestamp="1585195370298">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1823" height="336" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1585195370298" />
+    <state width="1823" height="336" key="GridCell.Tab.1.left" timestamp="1585195370298">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1823" height="336" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1585195370298" />
+    <state width="1823" height="336" key="GridCell.Tab.1.right" timestamp="1585195370298">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1823" height="336" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585195370298" />
+    <state x="476" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1585196173214">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="476" y="188" width="1037" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1585196173214" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>56</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>39</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>80</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>84</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/finder/finder.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
