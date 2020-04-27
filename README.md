@@ -23,9 +23,9 @@ $ findkw -k "要查找关键字" [-f --folder] [-o --filename_only] [-r --re_mod
 
 ##### -f, --folder        ---> 需要查找的文件夹，默认在运行目录下
 
-##### -r, --re_mode       ---> y/n 是否以正则方式查找，默认n
+##### -r, --re_mode       ---> y/n 是否以正则方式查找，默认n，可不指定参数值
 
-##### -o, --filename_only ---> y/n 是否只查找文件夹名和文件名，默认n
+##### -o, --filename_only ---> y/n 是否只查找文件夹名和文件名，默认n，可不指定参数值
 
 
 #### 示例：
@@ -43,7 +43,7 @@ $ findkw -k "good job"
 $ findkw -k "nice job" -f "/root/search_folder"
 
 # 在当前文件夹下查找带有关键字的文件夹名或者文件名：
-$ findkw -k "findkw" -o y
+$ findkw -k "findkw" -o
 # >>> [ folder ] [ /root/Findkw/findkw.egg-info ]
 # >>> [ folder ] [ /root/Findkw/build/lib/findkw ]
 # >>> [ file name ] [ /root/Findkw/findkw/findkw.py ]
@@ -51,14 +51,14 @@ $ findkw -k "findkw" -o y
 # ...
 
 # 正则模式查找所有以 .py 结尾的行：
-$ findkw -k ".*?\.py$" -r y
+$ findkw -k ".*?\.py$" -r
 # in file [ /root/Findkw/findkw.egg-info/SOURCES.txt ]: 
 # >>> [ 2 ] [ setup.py ]
 # >>> [ 3 ] [ findkw/__init__.py ]
 # >>> [ 4 ] [ findkw/findkw.py ]
 
 # 正则模式查找所有以 .py 结尾的文件夹和文件名：
-$ findkw -k ".*?\.py$" -r y -o y
+$ findkw -k ".*?\.py$" -r -o
 # >>> [ file name ] [ /root/Findkw/setup.py ]
 # >>> [ file name ] [ /root/Findkw/build/lib/findkw/findkw.py ]
 # >>> [ file name ] [ /root/Findkw/build/lib/findkw/__init__.py ]
@@ -66,7 +66,7 @@ $ findkw -k ".*?\.py$" -r y -o y
 # >>> [ file name ] [ /root/Findkw/findkw/__init__.py ]
 
 # 正则模式查找所有带有 0.1 版本字样的行：
-$ findkw -k "[Vv]ersion[\': ]+0\.1\.\d" -r y
+$ findkw -k "[Vv]ersion[\': ]+0\.1\.\d" -r
 # in file [ /root/Findkw/setup.py ]: 
 # >>> [ 8 ] [ 'version': '0.1.0', ]
 

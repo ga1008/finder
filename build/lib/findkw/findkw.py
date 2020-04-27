@@ -71,6 +71,10 @@ class Finder(object):
                     pass
         return container
 
+    def get_container_file_name_only(self):
+        container = dict()
+        cmd = f"find {self.path} -name '{self.kw}' "
+
     def get_container_re(self, lis):
         container = dict()
         for f in lis:
@@ -97,32 +101,30 @@ class Finder(object):
 
 
 def find():
-    dp = ' *** 这是一个在文件夹下所有的地方查找关键字的工具'
+    dp = ' *** 这是一个在文件夹下所有的地方查找关键字的工具，支持正则表达式'
     da = "--->   "
     parser = argparse.ArgumentParser(description=dp, add_help=True)
-    parser.add_argument("-f", "--folder", type=str, default='', help=f'{da}需要查找的文件夹，默认运行目录')
-    parser.add_argument("-k", "--keyword", type=str, default='', help=f'{da}要查找的关键字，必须值')
-    parser.add_argument("-r", "--re_mode", type=str, default='n', help=f'{da}y/n 是否以正则方式查找，默认n')
-    parser.add_argument("-o", "--filename_only", type=str, default='n', help=f'{da}y/n 是否只查找文件夹名和文件名，默认n')
+    parser.add_argument("-f", "--folder", type=str, dest="folder", nargs='1', default='', help=f'{da}需要查找的文件夹，默认运行目录')
+    parser.add_argument("-k", "--keyword", type=str, dest="keyword", nargs='1', default='', help=f'{da}要查找的关键字，必须值')
+    parser.add_argument("-r", "--re_mode", type=str, dest="re_mode", nargs='?', default='n', help=f'{da}y/n 是否以正则方式查找，默认n')
+    parser.add_argument("-o", "--filename_only", type=str, dest="filename_only", nargs='?', default='n', help=f'{da}y/n 是否只查找文件夹名和文件名，默认n')
     args = parser.parse_args()
 
-    kw = args.keyword
+    keyword = args.keyword
+    folder = args.folder
+    re_mode = args.re_mode
+    filename_only = args.filename_only
+    re_mode = True if re_mode.lower() == 'y' or re_mode is None else False
+    filename_only = True if filename_only.lower() == 'y' or filename_only is None else False
+
+    kw = keyword
     if not kw:
         raise ValueError('关键字是必须的: findkw -k xxx')
 
-    folder = args.folder
     if not folder:
         folder = os.getcwd()
 
-    fn_only = False
-    if args.filename_only.lower() == 'y':
-        fn_only = True
-
-    re_mode = False
-    if args.re_mode.lower() == 'y':
-        re_mode = True
-
-    fd = Finder(folder, kw, fn_only, re_mode, False)
+    fd = Finder(folder, kw, filename_only, re_mode, False)
     fd.start()
 
 

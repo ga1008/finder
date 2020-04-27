@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="138365bf-4be9-4dac-9cbe-b8db5c9611f5" name="Default Changelist" comment="" />
+    <list default="true" id="138365bf-4be9-4dac-9cbe-b8db5c9611f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Findkw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Findkw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/findkw/findkw.py" beforeDir="false" afterPath="$PROJECT_DIR$/findkw/findkw.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,13 +21,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="$PROJECT_DIR$/.idea" />
-      </set>
-    </option>
-  </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
@@ -38,14 +35,14 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Finder" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -212,13 +209,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="468" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585021006702">
@@ -229,42 +225,42 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1848" height="542" key="DebuggerActiveHint/70.27.1850.1053@70.27.1850.1053" timestamp="1585195366967" />
-    <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585018683055">
+    <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1587971781260">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1585018683055" />
-    <state width="1823" height="272" key="GridCell.Tab.0.bottom" timestamp="1585195497949">
+    <state x="778" y="311" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1587971781260" />
+    <state width="1823" height="336" key="GridCell.Tab.0.bottom" timestamp="1585198052481">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1823" height="272" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1585195497949" />
-    <state width="1823" height="272" key="GridCell.Tab.0.center" timestamp="1585195497947">
+    <state width="1823" height="336" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1585198052481" />
+    <state width="1823" height="336" key="GridCell.Tab.0.center" timestamp="1585198052479">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1823" height="272" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1585195497947" />
-    <state width="1823" height="272" key="GridCell.Tab.0.left" timestamp="1585195497946">
+    <state width="1823" height="336" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1585198052479" />
+    <state width="1823" height="336" key="GridCell.Tab.0.left" timestamp="1585198052478">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1823" height="272" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1585195497946" />
-    <state width="1823" height="272" key="GridCell.Tab.0.right" timestamp="1585195497948">
+    <state width="1823" height="336" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1585198052478" />
+    <state width="1823" height="336" key="GridCell.Tab.0.right" timestamp="1585198052480">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1823" height="272" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585195497948" />
-    <state width="1823" height="336" key="GridCell.Tab.1.bottom" timestamp="1585195370298">
+    <state width="1823" height="336" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585198052480" />
+    <state width="1823" height="336" key="GridCell.Tab.1.bottom" timestamp="1585198052483">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1823" height="336" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1585195370298" />
-    <state width="1823" height="336" key="GridCell.Tab.1.center" timestamp="1585195370298">
+    <state width="1823" height="336" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1585198052483" />
+    <state width="1823" height="336" key="GridCell.Tab.1.center" timestamp="1585198052482">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1823" height="336" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1585195370298" />
-    <state width="1823" height="336" key="GridCell.Tab.1.left" timestamp="1585195370298">
+    <state width="1823" height="336" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1585198052482" />
+    <state width="1823" height="336" key="GridCell.Tab.1.left" timestamp="1585198052481">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1823" height="336" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1585195370298" />
-    <state width="1823" height="336" key="GridCell.Tab.1.right" timestamp="1585195370298">
+    <state width="1823" height="336" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1585198052481" />
+    <state width="1823" height="336" key="GridCell.Tab.1.right" timestamp="1585198052482">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1823" height="336" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585195370298" />
+    <state width="1823" height="336" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585198052482" />
     <state x="476" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1585196173214">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -274,72 +270,72 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>56</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>64</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>44</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>39</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>40</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>27</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>24</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>30</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>78</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>79</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>80</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>81</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>84</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../Findkw/findkw/findkw.py</url>
+          <url>file://$PROJECT_DIR$/findkw/findkw.py</url>
           <line>85</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
