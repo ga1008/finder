@@ -114,8 +114,8 @@ def find():
     folder = args.folder
     re_mode = args.re_mode
     filename_only = args.filename_only
-    re_mode = True if re_mode.lower() == 'y' or re_mode is None else False
-    filename_only = True if filename_only.lower() == 'y' or filename_only is None else False
+    re_mode = True if re_mode is None or re_mode.lower() == 'y' else False
+    filename_only = True if filename_only is None or filename_only.lower() == 'y' else False
 
     kw = keyword
     if not kw:
