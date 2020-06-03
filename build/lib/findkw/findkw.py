@@ -73,7 +73,6 @@ class Finder(object):
     def delete_lines(self, match, dl_lines):
         dl_lines = [x.split(self.sep) for x in dl_lines]
         line_no = {int(x[0]) for x in dl_lines if x[0] and isinstance(x[0], str) and x[0].isdigit()}
-        line_str = {x[1] for x in dl_lines}
         dlp = Path(match)
         raw_lines = dlp.read_text().split("\n")
         new_lines = []
@@ -83,8 +82,8 @@ class Finder(object):
         new_file = "\n".join(new_lines)
         # os.remove(str(dlp.absolute()))
         dlp.write_text(new_file, encoding="utf-8")
-        for l_str in line_str:
-            print(f'line: \033[0;31;48m"{l_str}" ✘\033[0m')
+        for ln, l_str in dl_lines:
+            print(f'line [ \033[0;31;48m{ln}\033[0m ]: \033[0;31;48m"{l_str}" ✘\033[0m')
 
     @staticmethod
     def make_re_color(matched):
