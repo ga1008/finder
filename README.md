@@ -25,7 +25,13 @@ $ findkw -k "要查找关键字" [-f --folder] [-o --filename_only] [-r --re_mod
 
 ##### -r, --re_mode       ---> y/n 是否以正则方式查找，默认n，可不指定参数值
 
-##### -o, --filename_only ---> y/n 是否只查找文件夹名和文件名，默认n，可不指定参数值
+##### -o, --filename_only ---> y/n 是否只查找文件夹名和文件名，默认n，可不指定参数值  
+
+##### -rmf, --remove_file ---> y/n 是否删除找到的文件，默认n，可不指定参数值  
+
+##### -rml, --remove_line ---> y/n 是否删除找到的行，默认n，可不指定参数值  
+
+##### -qr, --quietly_remove ---> y/n 是否不经确认直接删除，默认n，可不指定参数值  
 
 
 #### 示例：
