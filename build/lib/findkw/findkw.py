@@ -35,14 +35,17 @@ class Finder(object):
                     type_str = 'file name'
                 print(f"{ft}[ {type_str} ] [ {match_str} ]")
             else:
+                lines_set = set()
                 print(f"in file [ {match} ]: ")
                 for line in type_line_id:
-                    line_no, line_str = line.split(self.sep)
-                    if not self.is_re:
-                        line_str = line_str.replace(self.kw, f"\033[0;31;48m{self.kw}\033[0m")
-                    else:
-                        line_str = re.sub(fr'(?P<kw>{self.kw})', self.make_re_color, line_str)
-                    print(f"{ft}[ {line_no} ] [ {line_str} ]")
+                    if line not in lines_set:
+                        lines_set.add(line)
+                        line_no, line_str = line.split(self.sep)
+                        if not self.is_re:
+                            line_str = line_str.replace(self.kw, f"\033[0;31;48m{self.kw}\033[0m")
+                        else:
+                            line_str = re.sub(fr'(?P<kw>{self.kw})', self.make_re_color, line_str)
+                        print(f"{ft}[ {line_no} ] [ {line_str} ]")
                 print()
 
     @staticmethod
