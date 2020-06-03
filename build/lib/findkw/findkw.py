@@ -54,9 +54,9 @@ class Finder(object):
                         if not self.qr:
                             is_rm = True if 'y' in input("delete this line? ").lower() else False
                             if is_rm:
-                                del_lines.append(line_no)
+                                del_lines.append(line)
                         else:
-                            del_lines.append(line_no)
+                            del_lines.append(line)
                 self.delete_lines(match, del_lines)
                 print()
             if self.rmf:
@@ -65,22 +65,26 @@ class Finder(object):
                     is_rm = True if 'y' in input("remove the above files? ").lower() else False
                     if is_rm:
                         mp.rmdir() if mp.is_dir() else os.remove(str(mp.absolute()))
-                        print(f'file: \033[0;31;48m{match}" ✘\033[0m"')
+                        print(f'file: \033[0;31;48m"{match}" ✘\033[0m')
                 else:
                     mp.rmdir() if mp.is_dir() else os.remove(str(mp.absolute()))
-                    print(f'file: \033[0;31;48m{match}" ✘\033[0m"')
+                    print(f'file: \033[0;31;48m"{match}" ✘\033[0m')
 
     def delete_lines(self, match, dl_lines):
-        dl_lines = {int(x) for x in dl_lines if x and isinstance(x, str) and x.isdigit()}
+        dl_lines = [x.split(self.sep) for x in dl_lines]
+        line_no = {int(x[0]) for x in dl_lines if x[0] and isinstance(x[0], str) and x[0].isdigit()}
+        line_str = {x[1] for x in dl_lines}
         dlp = Path(match)
         raw_lines = dlp.read_text().split("\n")
         new_lines = []
         for num, rl in enumerate(raw_lines, 1):
-            if num not in dl_lines:
+            if num not in line_no:
                 new_lines.append(rl)
         new_file = "\n".join(new_lines)
         # os.remove(str(dlp.absolute()))
         dlp.write_text(new_file, encoding="utf-8")
+        for l_str in line_str:
+            print(f'line: \033[0;31;48m"{l_str}" ✘\033[0m')
 
     @staticmethod
     def make_re_color(matched):
