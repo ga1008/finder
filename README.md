@@ -33,6 +33,8 @@ $ findkw -k "要查找关键字" [-f --folder] [-o --filename_only] [-r --re_mod
 
 ##### -qr, --quietly_remove ---> y/n 是否不经确认直接删除，默认n，可不指定参数值  
 
+##### -rt, --replace_to ---> 替换为，支持 python re.sub 的操作  
+
 
 #### 示例：
 
@@ -78,6 +80,13 @@ $ findkw -k "[Vv]ersion[\': ]+0\.1\.\d" -r
 
 # in file [ /root/Findkw/findkw.egg-info/PKG-INFO ]: 
 # >>> [ 3 ] [ Version: 0.1.0 ]
+
+# 正则替换行，只保留匹配到的数字，加参数 -qr 是静默更改模式，不会出现提示：
+$ findkw -k "VERSION\.(\d+)" -rt "\1" -r -qr
+# line [ 19 ]: "VERSION.123" ✘
+# replace to
+# line [ 19 ]: "123" ✔
+
 
 ```
 

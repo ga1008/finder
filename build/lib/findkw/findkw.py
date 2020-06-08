@@ -6,7 +6,7 @@ from pathlib import Path
 
 class Finder(object):
 
-    def __init__(self, dir_path, kw, name_only, is_re, return_container, rmf, rml, qr):
+    def __init__(self, dir_path, kw, name_only, is_re, return_container, rmf=None, rml=None, qr=None, rt=None):
         self.path = dir_path
         self.sep = "<<<***0...>>>"
         self.kw = kw
@@ -15,6 +15,8 @@ class Finder(object):
         self.rmf = rmf
         self.rml = rml
         self.qr = qr
+        self.rt_switch = True if rt is not None else False
+        self.rt = rt if rt is not None else ''
         self.return_container = return_container
 
     def start(self):
@@ -50,9 +52,9 @@ class Finder(object):
                         else:
                             line_str = re.sub(fr'(?P<kw>{self.kw})', self.make_re_color, line_str)
                         print(f"{ft}[ {line_no} ] [ {line_str} ]")
-                    if self.rml:
+                    if self.rml or self.rt_switch:
                         if not self.qr:
-                            is_rm = True if 'y' in input("delete this line? ").lower() else False
+                            is_rm = True if 'y' in input("change this line? ").lower() else False
                             if is_rm:
                                 del_lines.append(line)
                         else:
@@ -74,16 +76,27 @@ class Finder(object):
         dl_lines = [x.split(self.sep) for x in dl_lines]
         line_no = {int(x[0]) for x in dl_lines if x[0] and isinstance(x[0], str) and x[0].isdigit()}
         dlp = Path(match)
-        raw_lines = dlp.read_text().split("\n")
+        raw_lines = dlp.read_text()
+        # new_file = re.sub(self.kw, self.rt, raw_lines)
+
+        raw_lines = raw_lines.split("\n")
         new_lines = []
+        rpl_lines = []
         for num, rl in enumerate(raw_lines, 1):
             if num not in line_no:
                 new_lines.append(rl)
+            else:
+                rpl = re.sub(self.kw, self.rt, rl) if self.is_re else rl.replace(self.kw, self.rt)
+                rpl_lines.append([num, rl, rpl])
+                new_lines.append(rpl)
         new_file = "\n".join(new_lines)
-        # os.remove(str(dlp.absolute()))
+
         dlp.write_text(new_file, encoding="utf-8")
-        for ln, l_str in dl_lines:
-            print(f'line [ \033[0;31;48m{ln}\033[0m ]: \033[0;31;48m"{l_str}" ✘\033[0m')
+        for ln, l_str, lp_str in rpl_lines:
+            print(f'line [ \033[0;31;48m{ln}\033[0m ]: \033[1;31;48m"{l_str}" ✘\033[0m')
+            print("replace to")
+            print(f'line [ \033[0;32;48m{ln}\033[0m ]: \033[1;32;48m"{lp_str}" ✔\033[0m')
+            print()
 
     @staticmethod
     def make_re_color(matched):
@@ -158,6 +171,7 @@ def find():
     parser.add_argument("-rmf", "--remove_file", type=str, dest="remove_file", nargs='?', default='n', help=f'{da}y/n 是否删除找到的文件，默认n')
     parser.add_argument("-rml", "--remove_line", type=str, dest="remove_line", nargs='?', default='n', help=f'{da}y/n 是否删除找到的行，默认n')
     parser.add_argument("-qr", "--quietly_remove", type=str, dest="quietly_remove", nargs='?', default='n', help=f'{da}y/n 是否不经确认直接删除，默认n')
+    parser.add_argument("-rt", "--replace_to", type=str, dest="replace_to", default=None, help=f'{da}替换，支持 python re.sub 的操作')
     args = parser.parse_args()
 
     keyword = args.keyword
@@ -167,11 +181,13 @@ def find():
     remove_line = args.remove_line
     quietly_remove = args.quietly_remove
     filename_only = args.filename_only
+    replace_to = args.replace_to
     remove_file = True if remove_file is None or remove_file.lower() == 'y' else False
     remove_line = True if remove_line is None or remove_line.lower() == 'y' else False
     quietly_remove = True if quietly_remove is None or quietly_remove.lower() == 'y' else False
     re_mode = True if re_mode is None or re_mode.lower() == 'y' else False
     filename_only = True if filename_only is None or filename_only.lower() == 'y' else False
+    replace_to = replace_to if replace_to is not None and replace_to != 'None' else None
 
     kw = keyword
     if not kw:
@@ -180,10 +196,10 @@ def find():
     if not folder:
         folder = os.getcwd()
 
-    fd = Finder(folder, kw, filename_only, re_mode, False, remove_file, remove_line, quietly_remove)
+    fd = Finder(folder, kw, filename_only, re_mode, False, remove_file, remove_line, quietly_remove, replace_to)
     fd.start()
 
 
 if __name__ == '__main__':
-    fdr = Finder("/home/ga/Guardian/For-Longqi/MeeseeksBox/", 'LOG_DIR', False, False, False, False, False, False)
+    fdr = Finder("/home/ga/Guardian/For-Longqi/MeeseeksBox/", 'LOG_DIR', False, False, False, False, False, False, None)
     fdr.start()
