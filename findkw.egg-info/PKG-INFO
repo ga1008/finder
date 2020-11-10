@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: findkw
-Version: 0.1.9
+Version: 0.2.2
 Summary: find the files or words
 Home-page: https://github.com/ga1008/finder
 Author: Guardian
@@ -106,7 +106,7 @@ Description: 这是做什么的？
         #### 下载 Finder/findkw/findkw.py 文件到你的代码目录中
         
         ```
-        from findkw import Finder
+        from findkw.findkw import Finder
         
         folder = "/root/search_folder"
         kw = "正则表达式或者关键字"

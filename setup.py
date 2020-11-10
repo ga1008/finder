@@ -5,7 +5,7 @@ using_setuptools = True
 
 setup_args = {
     'name': 'findkw',
-    'version': '0.1.9',
+    'version': '0.2.2',
     'url': 'https://github.com/ga1008/finder',
     'description': 'find the files or words',
     'long_description': open('README.md', encoding="utf-8").read(),
@@ -29,8 +29,9 @@ setup_args = {
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    'install_requires': ['argparse'
-                         ],
+    'install_requires': [
+
+    ],
 }
 
 setup(**setup_args)

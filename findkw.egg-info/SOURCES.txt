@@ -8,5 +8,4 @@ findkw.egg-info/SOURCES.txt
 findkw.egg-info/dependency_links.txt
 findkw.egg-info/entry_points.txt
 findkw.egg-info/not-zip-safe
-findkw.egg-info/requires.txt
 findkw.egg-info/top_level.txt

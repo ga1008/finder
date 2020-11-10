@@ -96,7 +96,7 @@ $ findkw -k "VERSION\.(\d+)" -rt "\1" -r -qr
 #### 下载 Finder/findkw/findkw.py 文件到你的代码目录中
 
 ```
-from findkw import Finder
+from findkw.findkw import Finder
 
 folder = "/root/search_folder"
 kw = "正则表达式或者关键字"

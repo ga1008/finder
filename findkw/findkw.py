@@ -6,12 +6,15 @@ from pathlib import Path
 
 class Finder(object):
 
-    def __init__(self, dir_path, kw, name_only, is_re, return_container, rmf=None, rml=None, qr=None, rt=None):
+    def __init__(self, dir_path, kw, name_only, is_re, return_container, rmf=None, rml=None, qr=None, rt=None,
+                 full_match=False):
         self.path = dir_path
         self.sep = "<<<***0...>>>"
         self.kw = kw
+        self.kw_re = re.compile(fr"{kw}")
         self.name_only = name_only
         self.is_re = is_re
+        self.full_match = full_match
         self.rmf = rmf
         self.rml = rml
         self.qr = qr
@@ -135,6 +138,13 @@ class Finder(object):
         container = dict()
         cmd = f"find {self.path} -name '{self.kw}' "
 
+    def look_for_line_no(self, file, line):
+        no_lis = []
+        for num, li in enumerate(file.split('\n'), start=1):
+            if line.strip().strip('\n') in li:
+                no_lis.append(num)
+        return no_lis
+
     def get_container_re(self, lis):
         container = dict()
         for f in lis:
@@ -149,12 +159,26 @@ class Finder(object):
                     container[os.sep.join(fsn)] = f'{self.sep}file_name'
             else:
                 try:
-                    with open(f, 'r') as rf:
-                        lines = rf.readlines()
-                    lines = [x.replace(self.sep, ''.join([f"\\{x}" for x in self.sep])) if self.sep in x else x for x in lines]
-                    lines_with_kw = [f'{lines.index(x)+1}{self.sep}{x.strip()}' for x in lines if re.findall(self.kw, x)]
-                    if lines_with_kw:
-                        container[f] = lines_with_kw
+                    if self.full_match:
+                        with open(f, 'r') as rfa:
+                            file = rfa.read()
+                        if self.sep in file:
+                            file = file.replace(self.sep, ''.join([f"\\{x}" for x in self.sep]))
+                        file_with_kw = re.findall(self.kw_re, file)
+                        if file_with_kw:
+                            for line in file_with_kw:
+                                li_nos = self.look_for_line_no(file, line)
+                                for num in li_nos:
+                                    container[f] = f"{num}{self.sep}{line}"
+                    else:
+                        with open(f, 'r') as rf:
+                            lines = rf.readlines()
+                        lines = [x.replace(self.sep, ''.join([f"\\{x}" for x in self.sep])) if self.sep in x else x for
+                                 x in lines]
+                        lines_with_kw = [f'{lines.index(x) + 1}{self.sep}{x.strip()}' for x in lines if
+                                         re.findall(self.kw, x)]
+                        if lines_with_kw:
+                            container[f] = lines_with_kw
                 except Exception as E:
                     pass
         return container
@@ -164,19 +188,28 @@ def find():
     dp = ' *** 这是一个在文件夹下所有的地方查找关键字的工具，支持正则表达式'
     da = "--->   "
     parser = argparse.ArgumentParser(description=dp, add_help=True)
+    parser.add_argument("keyword", type=str, dest="keyword", default='', help=f'{da}要查找的关键字，必须值')
     parser.add_argument("-f", "--folder", type=str, dest="folder", default='', help=f'{da}需要查找的文件夹，默认运行目录')
-    parser.add_argument("-k", "--keyword", type=str, dest="keyword", default='', help=f'{da}要查找的关键字，必须值')
-    parser.add_argument("-r", "--re_mode", type=str, dest="re_mode", nargs='?', default='n', help=f'{da}y/n 是否以正则方式查找，默认n')
-    parser.add_argument("-o", "--filename_only", type=str, dest="filename_only", nargs='?', default='n', help=f'{da}y/n 是否只查找文件夹名和文件名，默认n')
-    parser.add_argument("-rmf", "--remove_file", type=str, dest="remove_file", nargs='?', default='n', help=f'{da}y/n 是否删除找到的文件，默认n')
-    parser.add_argument("-rml", "--remove_line", type=str, dest="remove_line", nargs='?', default='n', help=f'{da}y/n 是否删除找到的行，默认n')
-    parser.add_argument("-qr", "--quietly_remove", type=str, dest="quietly_remove", nargs='?', default='n', help=f'{da}y/n 是否不经确认直接删除，默认n')
-    parser.add_argument("-rt", "--replace_to", type=str, dest="replace_to", default=None, help=f'{da}替换，支持 python re.sub 的操作')
+    parser.add_argument("-r", "--re_mode", type=str, dest="re_mode", nargs='?', default='n',
+                        help=f'{da}y/n 是否以正则方式查找，默认n')
+    parser.add_argument("-fm", "--full_match", type=str, dest="full_match", nargs='?', default='n',
+                        help=f'{da}y/n 是否全匹配，默认n')
+    parser.add_argument("-o", "--filename_only", type=str, dest="filename_only", nargs='?', default='n',
+                        help=f'{da}y/n 是否只查找文件夹名和文件名，默认n')
+    parser.add_argument("-rmf", "--remove_file", type=str, dest="remove_file", nargs='?', default='n',
+                        help=f'{da}y/n 是否删除找到的文件，默认n')
+    parser.add_argument("-rml", "--remove_line", type=str, dest="remove_line", nargs='?', default='n',
+                        help=f'{da}y/n 是否删除找到的行，默认n')
+    parser.add_argument("-qr", "--quietly_remove", type=str, dest="quietly_remove", nargs='?', default='n',
+                        help=f'{da}y/n 是否不经确认直接删除，默认n')
+    parser.add_argument("-rt", "--replace_to", type=str, dest="replace_to", default=None,
+                        help=f'{da}替换，支持 python re.sub 的操作')
     args = parser.parse_args()
 
     keyword = args.keyword
     folder = args.folder
     re_mode = args.re_mode
+    full_match = args.full_match
     remove_file = args.remove_file
     remove_line = args.remove_line
     quietly_remove = args.quietly_remove
@@ -186,20 +219,26 @@ def find():
     remove_line = True if remove_line is None or remove_line.lower() == 'y' else False
     quietly_remove = True if quietly_remove is None or quietly_remove.lower() == 'y' else False
     re_mode = True if re_mode is None or re_mode.lower() == 'y' else False
+    full_match = True if full_match is None or full_match.lower() == 'y' else False
     filename_only = True if filename_only is None or filename_only.lower() == 'y' else False
     replace_to = replace_to if replace_to is not None and replace_to != 'None' else None
 
     kw = keyword
     if not kw:
-        raise ValueError('关键字是必须的: findkw -k xxx')
+        raise ValueError('关键字是必须的: findkw "xxx"')
 
     if not folder:
         folder = os.getcwd()
 
-    fd = Finder(folder, kw, filename_only, re_mode, False, remove_file, remove_line, quietly_remove, replace_to)
+    fd = Finder(folder, kw, filename_only, re_mode, False, remove_file, remove_line, quietly_remove, replace_to,
+                full_match)
     fd.start()
 
 
 if __name__ == '__main__':
-    fdr = Finder("/home/ga/Guardian/For-Longqi/MeeseeksBox/", 'LOG_DIR', False, False, False, False, False, False, None)
-    fdr.start()
+    fdr = Finder(
+        "/home/ga/Guardian/For-Longqi/tunnel_test_spider/tunnel_test_spider/",
+        "OH_NO_REDIS.*?(\{[^\}]+\})",
+        False, True, True, False, False, False, None, full_match=True
+    )
+    print(fdr.start())
