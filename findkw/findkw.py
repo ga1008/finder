@@ -188,7 +188,7 @@ def find():
     dp = ' *** 这是一个在文件夹下所有的地方查找关键字的工具，支持正则表达式'
     da = "--->   "
     parser = argparse.ArgumentParser(description=dp, add_help=True)
-    parser.add_argument("keyword", type=str, dest="keyword", default='', help=f'{da}要查找的关键字，必须值')
+    parser.add_argument("keyword", type=str, default='', help=f'{da}要查找的关键字，必须值')
     parser.add_argument("-f", "--folder", type=str, dest="folder", default='', help=f'{da}需要查找的文件夹，默认运行目录')
     parser.add_argument("-r", "--re_mode", type=str, dest="re_mode", nargs='?', default='n',
                         help=f'{da}y/n 是否以正则方式查找，默认n')
