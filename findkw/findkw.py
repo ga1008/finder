@@ -7,10 +7,11 @@ from pathlib import Path
 class Finder(object):
 
     def __init__(self, dir_path, kw, name_only, is_re, return_container, rmf=None, rml=None, qr=None, rt=None,
-                 full_match=False):
+                 full_match=False, suffix=None):
         self.path = dir_path
         self.sep = "<<<***0...>>>"
         self.kw = kw
+        self.suffix = set(suffix)
         self.kw_re = re.compile(fr"{kw}")
         self.name_only = name_only
         self.is_re = is_re
@@ -25,7 +26,10 @@ class Finder(object):
     def start(self):
         f_lis = []
         for root, sub_dir, file_names in os.walk(self.path):
-            f_lis += [os.path.join(root, file_name) for file_name in file_names]
+            if self.suffix:
+                f_lis += [os.path.join(root, file_name) for file_name in file_names if self.is_right_suffix(file_name)]
+            else:
+                f_lis += [os.path.join(root, file_name) for file_name in file_names]
         container = self.get_container(f_lis) if not self.is_re else self.get_container_re(f_lis)
         if self.return_container:
             return container
@@ -74,6 +78,11 @@ class Finder(object):
                 else:
                     mp.rmdir() if mp.is_dir() else os.remove(str(mp.absolute()))
                     print(f'file: \033[0;31;48m"{match}" ✘\033[0m')
+
+    def is_right_suffix(self, file_name: str):
+        return any([
+             file_name.lower().endswith(f".{x.lower()}") for x in self.suffix
+        ])
 
     def delete_lines(self, match, dl_lines):
         dl_lines = [x.split(self.sep) for x in dl_lines]
@@ -192,6 +201,8 @@ def find():
     parser.add_argument("-f", "--folder", type=str, dest="folder", default='', help=f'{da}需要查找的文件夹，默认运行目录')
     parser.add_argument("-r", "--re_mode", type=str, dest="re_mode", nargs='?', default='n',
                         help=f'{da}y/n 是否以正则方式查找，默认n')
+    parser.add_argument("-sf", "--suffix", type=str, dest="suffix", default=None,
+                        help=f'{da}只搜索指定后缀的文件, 使用逗号分隔, 例如 py,tar.gz')
     parser.add_argument("-fm", "--full_match", type=str, dest="full_match", nargs='?', default='n',
                         help=f'{da}y/n 是否全匹配，默认n')
     parser.add_argument("-o", "--filename_only", type=str, dest="filename_only", nargs='?', default='n',
@@ -208,6 +219,7 @@ def find():
 
     keyword = args.keyword
     folder = args.folder
+    suffix = args.suffix.split(",") if args.suffix else None
     re_mode = args.re_mode
     full_match = args.full_match
     remove_file = args.remove_file
@@ -231,7 +243,7 @@ def find():
         folder = os.getcwd()
 
     fd = Finder(folder, kw, filename_only, re_mode, False, remove_file, remove_line, quietly_remove, replace_to,
-                full_match)
+                full_match, suffix)
     fd.start()
 
 

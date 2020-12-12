@@ -5,7 +5,7 @@ using_setuptools = True
 
 setup_args = {
     'name': 'findkw',
-    'version': '0.2.3',
+    'version': '0.2.4',
     'url': 'https://github.com/ga1008/finder',
     'description': 'find the files or words',
     'long_description': open('README.md', encoding="utf-8").read(),
