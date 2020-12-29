@@ -20,47 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71b1d583-51a7-47aa-9647-f8e20c863123" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Findkw.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/findkw/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/findkw/find_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/findkw/findkw.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.6-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.6.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.7-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.7.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.8-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.8.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.9-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.9.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.0-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.0.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.1-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.1.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.2-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.2.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.3-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.3.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.4-py3-none-any.whl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.4.tar.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findkw.egg-info/PKG-INFO" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findkw.egg-info/SOURCES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findkw.egg-info/dependency_links.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findkw.egg-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findkw.egg-info/not-zip-safe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findkw.egg-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findkw/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findkw/find_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/findkw/findkw.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
