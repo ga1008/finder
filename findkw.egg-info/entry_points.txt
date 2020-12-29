@@ -1,3 +1,0 @@
-[console_scripts]
-findkw = findkw.findkw:find
-

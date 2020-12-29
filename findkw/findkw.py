@@ -11,7 +11,7 @@ class Finder(object):
         self.path = dir_path
         self.sep = "<<<***0...>>>"
         self.kw = kw
-        self.suffix = set(suffix)
+        self.suffix = set(suffix) if suffix else None
         self.kw_re = re.compile(fr"{kw}")
         self.name_only = name_only
         self.is_re = is_re
