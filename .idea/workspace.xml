@@ -20,6 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="71b1d583-51a7-47aa-9647-f8e20c863123" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/dist/findkw-0.2.7-py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/findkw-0.2.7.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Findkw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Findkw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/findkw/findkw.py" beforeDir="false" afterPath="$PROJECT_DIR$/findkw/findkw.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +39,7 @@
   <component name="JupyterTrust" id="db10ea30-0eb1-4c75-aafb-55ab63452ef3" />
   <component name="ProjectId" id="1lYk53TvEfcaLMtZB3LNmGBq9Jt" />
   <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -40,7 +47,9 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -71,11 +80,9 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="477" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1607781407259">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="477" y="188" width="1037" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1607781407259" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

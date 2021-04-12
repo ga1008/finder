@@ -1,7 +1,10 @@
 import argparse
 import os
 import re
+import shutil
 from pathlib import Path
+
+from BaseColor.base_colors import red, hred, hgreen, hblue
 
 
 class Finder(object):
@@ -12,7 +15,13 @@ class Finder(object):
         self.sep = "<<<***0...>>>"
         self.kw = kw
         self.suffix = set(suffix) if suffix else None
-        self.kw_re = re.compile(fr"{kw}")
+        self.kw_re = None
+        if is_re:
+            try:
+                self.kw_re = re.compile(fr"{kw}")
+            except Exception as E:
+                print(hred("Error:"), red("can not compile re string:"), f"'{hred(kw)}'", f'\n{E}')
+                exit(1)
         self.name_only = name_only
         self.is_re = is_re
         self.full_match = full_match
@@ -25,40 +34,49 @@ class Finder(object):
 
     def start(self):
         f_lis = []
-        for root, sub_dir, file_names in os.walk(self.path):
+        for root, sub_dirs, file_names in os.walk(self.path):
             if self.suffix:
                 f_lis += [os.path.join(root, file_name) for file_name in file_names if self.is_right_suffix(file_name)]
+                f_lis += [os.path.join(root, sub_dir) for sub_dir in sub_dirs if self.is_right_suffix(sub_dir)]
             else:
                 f_lis += [os.path.join(root, file_name) for file_name in file_names]
+                f_lis += [os.path.join(root, sub_dir) for sub_dir in sub_dirs]
         container = self.get_container(f_lis) if not self.is_re else self.get_container_re(f_lis)
         if self.return_container:
             return container
         ft = " >>> "
+        file_count = 0
+        dir_count = 0
+        line_count = 0
         for match, type_line_id in container.items():
             type_str = 'file content'
             if isinstance(type_line_id, str):
                 if not self.is_re:
-                    match_str = match.replace(self.kw, f"\033[0;31;48m{self.kw}\033[0m")
+                    match_str = match.replace(self.kw, red(self.kw))
                 else:
                     match_str = re.sub(fr'(?P<kw>{self.kw})', self.make_re_color, match)
                 if f'{self.sep}dir_name' in type_line_id:
                     type_str = 'folder'
+                    dir_count += 1
                 if f'{self.sep}file_name' in type_line_id:
                     type_str = 'file name'
-                print(f"{ft}[ {type_str} ] [ {match_str} ]")
+                    file_count += 1
+                print(f"{ft}[ {hblue(type_str)} ] [ {match_str} ]")
             else:
                 lines_set = set()
                 del_lines = list()
-                print(f"in file [ {match} ]: ")
+                print(f"in file [ {hgreen(match)} ]: ")
+                file_count += 1
                 for line in type_line_id:
                     line_no, line_str = line.split(self.sep)
                     if line not in lines_set:
                         lines_set.add(line)
                         if not self.is_re:
-                            line_str = line_str.replace(self.kw, f"\033[0;31;48m{self.kw}\033[0m")
+                            line_str = line_str.replace(self.kw, red(self.kw))
                         else:
                             line_str = re.sub(fr'(?P<kw>{self.kw})', self.make_re_color, line_str)
-                        print(f"{ft}[ {line_no} ] [ {line_str} ]")
+                        print(f"{ft}[ {hblue(line_no)} ] [ {line_str} ]")
+                        line_count += 1
                     if self.rml or self.rt_switch:
                         if not self.qr:
                             is_rm = True if 'y' in input("change this line? ").lower() else False
@@ -71,17 +89,27 @@ class Finder(object):
             if self.rmf:
                 mp = Path(match)
                 if not self.qr:
-                    is_rm = True if 'y' in input("remove the above files? ").lower() else False
+                    is_rm = True if 'y' in input("remove the above files?[y/N]").lower() else False
                     if is_rm:
-                        mp.rmdir() if mp.is_dir() else os.remove(str(mp.absolute()))
-                        print(f'file: \033[0;31;48m"{match}" ✘\033[0m')
+                        if mp.exists():
+                            shutil.rmtree(str(mp.absolute()))
+                            print(f'file: {red(match)} {hred("✘")}')
+                        else:
+                            print(f'file: {red(match)} {hred("Not Exists")}')
                 else:
-                    mp.rmdir() if mp.is_dir() else os.remove(str(mp.absolute()))
-                    print(f'file: \033[0;31;48m"{match}" ✘\033[0m')
+                    if mp.exists():
+                        shutil.rmtree(str(mp.absolute()))
+                        print(f'file: {red(match)} {hred("✘")}')
+        if not self.rml or not self.rmf:
+            print(" ----------- STATISTICS ----------- ")
+            print(f"  [ {hgreen(dir_count)} ] Total Folders")
+            print(f"  [ {hgreen(file_count)} ] Total Files")
+            print(f"  [ {hgreen(line_count)} ] Total Lines")
+            print(' ---------------------------------- ')
 
     def is_right_suffix(self, file_name: str):
         return any([
-             file_name.lower().endswith(f".{x.lower()}") for x in self.suffix
+            file_name.lower().endswith(f".{x.lower()}") for x in self.suffix
         ])
 
     def delete_lines(self, match, dl_lines):
@@ -105,14 +133,14 @@ class Finder(object):
 
         dlp.write_text(new_file, encoding="utf-8")
         for ln, l_str, lp_str in rpl_lines:
-            print(f'line [ \033[0;31;48m{ln}\033[0m ]: \033[1;31;48m"{l_str}" ✘\033[0m')
+            print(f'line [ {red(ln)} ]: "{red(l_str)}" {hred("✘")}')
             print("replace to")
-            print(f'line [ \033[0;32;48m{ln}\033[0m ]: \033[1;32;48m"{lp_str}" ✔\033[0m')
+            print(f'line [ {red(ln)} ]: "{red(lp_str)}" {hred("✔")}')
             print()
 
     @staticmethod
     def make_re_color(matched):
-        res = f"\033[0;31;48m{matched.group('kw')}\033[0m"
+        res = f"{red(matched.group('kw'))}"
         return res
 
     def get_container(self, lis):
@@ -121,7 +149,7 @@ class Finder(object):
             if self.name_only:
                 fs = f.split(os.sep)
                 fsn = [os.sep.join(fs[:-1]), fs[-1]]
-                if self.kw in fsn[0]:
+                if fsn[0].endswith(self.kw):
                     container[fsn[0]] = f'{self.sep}dir_name'
                 if self.kw in fsn[1]:
                     container[os.sep.join(fsn)] = f'{self.sep}file_name'
@@ -139,13 +167,9 @@ class Finder(object):
                     # lines_with_kw = [f'{lines.index(x)+1}{self.sep}{x.strip()}' for x in lines if self.kw in x]
                     if lines_with_kw:
                         container[f] = lines_with_kw
-                except Exception as E:
+                except:
                     pass
         return container
-
-    def get_container_file_name_only(self):
-        container = dict()
-        cmd = f"find {self.path} -name '{self.kw}' "
 
     def look_for_line_no(self, file, line):
         no_lis = []
@@ -162,7 +186,7 @@ class Finder(object):
                     f = f.replace(self.sep, ''.join([f"\\{x}" for x in self.sep]))
                 fs = f.split(os.sep)
                 fsn = [os.sep.join(fs[:-1]), fs[-1]]
-                if re.findall(self.kw, fsn[0]):
+                if re.findall(f"{self.kw}$", fsn[0]):
                     container[fsn[0]] = f'{self.sep}dir_name'
                 if re.findall(self.kw, fsn[1]):
                     container[os.sep.join(fsn)] = f'{self.sep}file_name'
@@ -188,7 +212,7 @@ class Finder(object):
                                          re.findall(self.kw, x)]
                         if lines_with_kw:
                             container[f] = lines_with_kw
-                except Exception as E:
+                except:
                     pass
         return container
 
