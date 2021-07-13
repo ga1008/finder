@@ -19,19 +19,49 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71b1d583-51a7-47aa-9647-f8e20c863123" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dist/findkw-0.2.7-py3-none-any.whl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/findkw-0.2.7.tar.gz" afterDir="false" />
+    <list default="true" id="71b1d583-51a7-47aa-9647-f8e20c863123" name="Default Changelist" comment="debug">
+      <change afterPath="$PROJECT_DIR$/dist/findkw-0.2.8-py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/findkw-0.2.8.tar.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/findkw-0.3.0-py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/findkw-0.3.0.tar.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Findkw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Findkw.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.6-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.1.6-py3-none-any.whl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.6.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.1.6.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.7-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.1.7-py3-none-any.whl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.7.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.1.7.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.8-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.1.8-py3-none-any.whl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.8.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.1.8.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.9-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.1.9-py3-none-any.whl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.1.9.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.1.9.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.0-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.2.0-py3-none-any.whl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.0.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.2.0.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.1-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.2.1-py3-none-any.whl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.1.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.2.1.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.2-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.2.2-py3-none-any.whl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.2.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.2.2.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.3-py3-none-any.whl" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.2.3-py3-none-any.whl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/findkw-0.2.3.tar.gz" beforeDir="false" afterPath="$PROJECT_DIR$/dist/findkw-0.2.3.tar.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/findkw/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/findkw/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/findkw/find_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/findkw/findkw.py" beforeDir="false" afterPath="$PROJECT_DIR$/findkw/findkw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +83,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -64,7 +98,17 @@
       <option name="presentableId" value="Default" />
       <updated>1607781226673</updated>
       <workItem from="1607781227861" duration="1829000" />
+      <workItem from="1626082648472" duration="1379000" />
+      <workItem from="1626136265326" duration="12568000" />
     </task>
+    <task id="LOCAL-00001" summary="debug">
+      <created>1618217692359</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618217692359</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,5 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug" />
   </component>
 </project>
