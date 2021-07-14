@@ -1,5 +1,6 @@
 import argparse
 import os
+import platform
 import re
 import shutil
 from pathlib import Path
@@ -143,6 +144,9 @@ class Finder(object):
         # shutil.rmtree(file_name)
         try:
             nf = f.decode(chardet.detect(f)["encoding"])
+            if platform.system() == "Windows":
+                nf = nf.replace('\r\n', '\n')
+                nf = nf.replace('\r', '\n')
             with open(file_name, 'w', encoding=new_coding) as wf:
                 wf.write(nf)
         except Exception as E:
