@@ -7,7 +7,7 @@ using_setuptools = True
 
 setup_args = {
     'name': 'findkw',
-    'version': '0.3.2',
+    'version': '0.3.3',
     'url': 'https://github.com/ga1008/finder',
     'description': 'find the files or words',
     'long_description': open('README.md', encoding="utf-8").read(),
@@ -33,6 +33,7 @@ setup_args = {
     ],
     'install_requires': [
         "basecolors",
+        "colorama",
         "chardet",
     ],
 }

@@ -337,8 +337,8 @@ def find():
 
 if __name__ == '__main__':
     fdr = Finder(
-        "/home/ga/Guardian/For-Longqi/tunnel_test_spider/tunnel_test_spider/",
-        "OH_NO_REDIS.*?(\{[^\}]+\})",
+        "/home/ga/Guardian/For-Python/Findkw",
+        "  +print\(",
         False, True, True, False, False, False, None, full_match=True
     )
     print(fdr.start())
